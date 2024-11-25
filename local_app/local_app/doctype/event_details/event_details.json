@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{event_name}-{####}",
+ "creation": "2024-10-18 17:48:35.333606",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "event_name",
+  "event_capacity",
+  "event_organiser",
+  "organiser_name",
+  "column_break_lcsk",
+  "hall_number",
+  "event_start_date",
+  "event_end_date",
+  "section_break_k2hm",
+  "employee_details",
+  "public_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "event_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Event Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lcsk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "event_organiser",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Event Organiser",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "event_organiser.employee_name",
+   "fieldname": "organiser_name",
+   "fieldtype": "Data",
+   "label": "Organiser Name"
+  },
+  {
+   "fieldname": "hall_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Hall Number",
+   "options": "Meeting Rooms",
+   "reqd": 1
+  },
+  {
+   "fieldname": "event_start_date",
+   "fieldtype": "Datetime",
+   "label": "Event Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "event_end_date",
+   "fieldtype": "Datetime",
+   "label": "Event End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_k2hm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_details",
+   "fieldtype": "Table",
+   "label": "Employee Details",
+   "options": "Employee Participation list"
+  },
+  {
+   "fieldname": "public_details",
+   "fieldtype": "Table",
+   "label": "Public Details",
+   "options": "Public Details"
+  },
+  {
+   "fieldname": "event_capacity",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Event Capacity",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-04 18:07:20.366888",
+ "modified_by": "Administrator",
+ "module": "Local App",
+ "name": "Event Details",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "TRIP-.######",
+ "creation": "2024-11-12 15:57:08.418118",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "from_location",
+  "start_date",
+  "vehicle_number",
+  "vehicle_model",
+  "column_break_4s6l",
+  "to_location",
+  "end_date",
+  "driver_name",
+  "amended_from",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vehicle Cab Booking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "vehicle_number.model",
+   "fieldname": "vehicle_model",
+   "fieldtype": "Data",
+   "label": "Vehicle Model",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle_number.employee",
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "From Location",
+   "options": "Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_location",
+   "fieldtype": "Link",
+   "label": "To Location",
+   "options": "Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4s6l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.end_date != null;",
+   "fieldname": "vehicle_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vehicle Number",
+   "mandatory_depends_on": "eval:doc.end_time != null;",
+   "options": "Vehicle",
+   "reqd": 1
+  },
+  {
+   "default": "Yet to Start",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Yet to Start\nTrip Started\nTrip Completed",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-20 10:47:55.127947",
+ "modified_by": "Administrator",
+ "module": "Local App",
+ "name": "Vehicle Cab Booking",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

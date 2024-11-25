@@ -1,0 +1,40 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-15 12:59:36.500396",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "test_doc_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "test_doc_name",
+   "fieldtype": "Data",
+   "label": "Test Doc Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-11-15 13:03:44.030949",
+ "modified_by": "Administrator",
+ "module": "Local App",
+ "name": "Test Single",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

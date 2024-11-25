@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:AB-{####}",
+ "creation": "2024-10-18 10:12:45.920655",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_m27w",
+  "employee_name",
+  "employee_nname",
+  "capacity_needed",
+  "meeting_room_number",
+  "event_name",
+  "column_break_rkpk",
+  "start_date_and_time",
+  "end_date_and_time",
+  "meeting_hours",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_m27w",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee ID",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "capacity_needed",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Capacity Needed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meeting_room_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Meeting Room Number",
+   "options": "Meeting Rooms",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rkpk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date_and_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start Date And Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meeting_hours",
+   "fieldtype": "Data",
+   "label": "Meeting Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Meeting Room Bookings",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "employee_name.employee_name",
+   "fieldname": "employee_nname",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "end_date_and_time",
+   "fieldtype": "Datetime",
+   "label": "End Date And Time"
+  },
+  {
+   "fieldname": "event_name",
+   "fieldtype": "Link",
+   "label": "Event Name",
+   "options": "Event Details",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-10-23 14:18:26.999659",
+ "modified_by": "Administrator",
+ "module": "Local App",
+ "name": "Meeting Room Bookings",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

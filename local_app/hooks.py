@@ -41,7 +41,16 @@ app_license = "mit"
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
+doctype_js = {
+    # "Task" : "client_scripts/client_scripts.js",
+    # "Purchase Order" : "client_scripts/client_scripts.js",
+    "Purchase Order" : "client_scripts/purchase_order_client.js"
 
+}
+
+override_whitelisted_methods = {
+    "erpnext.buying.doctype.purchase_order.purchase_order.item_last_purchase_rate": "local_app.doc_events.purchase_order.item_last_purchase_rate"
+}
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
@@ -137,18 +146,30 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
+doc_events = {
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
-# 	}
-# }
+#	 }
+    "Asset":{
+        "on_submit": "local_app.doc_events.doc_events.set_status_asset"
+    },
+    "Task" : {
+        "on_update" : "local_app.doc_events.doc_events.update_asset_maintenance"
+    },
+    # "Test Doctype":{
+    #     "on_update":"local_app.local_app.doctype.test_doctype.test_doctype.scheduler_jobs"
+    # }
+    # "Vehicle Cab Booking": {
+    #     "on_update" : "local_app.local_app.doctype.vehicle_cab_booking.vehicle_cab_booking.cron_status_update"
+    # }
+}
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"local_app.tasks.all"
 # 	],
@@ -164,8 +185,19 @@ app_license = "mit"
 # 	"monthly": [
 # 		"local_app.tasks.monthly"
 # 	],
-# }
-
+    "cron": {
+    #     "*/1 * * * *": [
+    #         "local_app.local_app.doctype.test_doctype.test_doctype.scheduler_jobs"
+    #     ],
+        "*/30 * * * *":[
+            "local_app.local_app.doctype.vehicle_cab_booking.vehicle_cab_booking.cron_status_update"
+        ]
+    },
+    # "hourly": [
+    #     "local_app.doc_events.doc_events.scheduler_jobs",
+    # ],
+        
+}
 # Testing
 # -------
 

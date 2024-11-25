@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-14 17:49:06.978330",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "person_name",
+  "hooks",
+  "from_date",
+  "to_date",
+  "company",
+  "column_break_tpkd",
+  "purchase_inv",
+  "posting_date",
+  "random_name",
+  "section_break_atd6",
+  "child_table"
+ ],
+ "fields": [
+  {
+   "fieldname": "hooks",
+   "fieldtype": "Data",
+   "label": "Hooks"
+  },
+  {
+   "fieldname": "person_name",
+   "fieldtype": "Data",
+   "label": "Person Name"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company"
+  },
+  {
+   "fieldname": "column_break_tpkd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "purchase_inv",
+   "fieldtype": "Data",
+   "label": "Purchase Invoice"
+  },
+  {
+   "fieldname": "child_table",
+   "fieldtype": "Table",
+   "label": "Child Table",
+   "options": "Test Child"
+  },
+  {
+   "fieldname": "section_break_atd6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Data",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "random_name",
+   "fieldtype": "Data",
+   "label": "Random Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-15 16:56:38.381636",
+ "modified_by": "Administrator",
+ "module": "Local App",
+ "name": "Test Doctype",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

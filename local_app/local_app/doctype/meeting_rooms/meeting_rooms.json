@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "autoname": "field:meeting_room_number",
+ "creation": "2024-10-18 10:14:37.075774",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "meeting_room_number",
+  "room_status",
+  "room_capacity",
+  "meeting_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "meeting_room_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Meeting Room Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "room_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Room Status",
+   "options": "Active\nOccupied\nMaintenance",
+   "translatable": 1
+  },
+  {
+   "fieldname": "room_capacity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Room Capacity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meeting_details",
+   "fieldtype": "Table",
+   "label": "Meeting Details",
+   "options": "Meeting Booking Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-18 15:48:36.745376",
+ "modified_by": "Administrator",
+ "module": "Local App",
+ "name": "Meeting Rooms",
+ "naming_rule": "By fieldname",
+ "nsm_parent_field": "parent_meeting_room",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
